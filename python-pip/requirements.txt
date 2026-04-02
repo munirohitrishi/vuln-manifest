@@ -1,0 +1,49 @@
+# ============================================
+#  INTENTIONALLY VULNERABLE DEPENDENCIES
+#  DO NOT USE IN PRODUCTION!
+# ============================================
+
+# VULN: Django 3.2.0 - Multiple CVEs (SQL injection, XSS, DoS)
+Django==3.2.0
+
+# VULN: Flask 2.0.0 - CVE-2023-30861 (Session cookie vulnerability)
+Flask==2.0.0
+
+# VULN: requests 2.25.0 - CVE-2023-32681 (Proxy-Auth header leak)
+requests==2.25.0
+
+# VULN: Jinja2 3.0.0 - CVE-2024-22195 (XSS in templates)
+Jinja2==3.0.0
+
+# VULN: Pillow 8.0.0 - Multiple CVEs (RCE via image processing)
+Pillow==8.0.0
+
+# VULN: PyYAML 5.3 - CVE-2020-14343 (Arbitrary code execution)
+PyYAML==5.3
+
+# VULN: urllib3 1.26.4 - CVE-2023-43804 (Cookie leakage)
+urllib3==1.26.4
+
+# VULN: cryptography 3.4.0 - Multiple CVEs
+cryptography==3.4
+
+# VULN: numpy 1.21.0 - CVE-2021-41496 (Buffer overflow)
+numpy==1.21.0
+
+# VULN: paramiko 2.7.0 - CVE-2023-48795 (Terrapin SSH attack)
+paramiko==2.7.0
+
+# VULN: setuptools 60.0.0 - CVE-2024-6345 (RCE via package URL)
+setuptools==60.0.0
+
+# VULN: certifi 2022.12.07 - CVE-2023-37920 (Revoked root cert)
+certifi==2022.12.7
+
+# VULN: aiohttp 3.8.0 - Multiple CVEs
+aiohttp==3.8.0
+
+# VULN: sqlalchemy 1.4.0 - SQL injection CVEs
+SQLAlchemy==1.4.0
+
+# VULN: werkzeug 2.0.0 - CVE-2023-46136 (DoS)
+Werkzeug==2.0.0
