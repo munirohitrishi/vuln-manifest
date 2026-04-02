@@ -1,0 +1,41 @@
+{
+  "name": "node-vuln-app",
+  "version": "1.0.0",
+  "description": "Intentionally Vulnerable Node.js App - SCA Practice Lab",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "audit": "npm audit",
+    "audit:fix": "npm audit fix",
+    "snyk:test": "snyk test",
+    "snyk:monitor": "snyk monitor"
+  },
+
+  "_comment": "============================================",
+  "_comment2": "INTENTIONALLY VULNERABLE - DO NOT USE IN PRODUCTION!",
+  "_comment3": "============================================",
+
+  "dependencies": {
+    "express": "4.17.1",
+    "lodash": "4.17.20",
+    "axios": "0.21.1",
+    "minimist": "1.2.5",
+    "jsonwebtoken": "8.5.0",
+    "qs": "6.5.2",
+    "path-parse": "1.0.6",
+    "node-fetch": "2.6.1",
+    "underscore": "1.12.0",
+    "moment": "2.29.1",
+    "handlebars": "4.7.6",
+    "helmet": "4.4.0",
+    "body-parser": "1.19.0",
+    "mongoose": "5.11.0",
+    "sequelize": "6.3.0"
+  },
+
+  "devDependencies": {
+    "nodemon": "2.0.6",
+    "mocha": "8.2.0",
+    "eslint": "7.12.0"
+  }
+}
