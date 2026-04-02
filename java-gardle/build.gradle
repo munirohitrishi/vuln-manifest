@@ -1,0 +1,35 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.6.0'  // VULNERABLE
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+group = 'com.vuln-lab'
+version = '1.0.0'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+// ============================================
+//  INTENTIONALLY VULNERABLE DEPENDENCIES
+//  DO NOT USE IN PRODUCTION!
+// ============================================
+
+dependencies {
+    // VULN: Spring Boot 2.6.0
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+
+    // VULN: Log4j 2.14.1 - CVE-2021-44228 (Log4Shell) CVSS 10.0
+    implementation 'org.apache.logging.log4j:log4j-core:2.14.1'
+
+    // VULN: Gson 2.8.5 - CVE-2022-25647 (DoS) CVSS 7.5
+    implementation 'com.google.code.gson:gson:2.8.5'
+
+    // VULN: Guava 29.0 - CVE-2023-2976 (Temp file info disclosure)
+    implementation 'com.google.guava:guava:29.0-jre'
+
+    // Test
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
