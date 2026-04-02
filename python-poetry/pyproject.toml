@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "python-vuln-poetry-app"
+version = "1.0.0"
+description = "Intentionally Vulnerable Python App (Poetry) - SCA Practice Lab"
+authors = ["Rohit Rishi Muni"]
+
+# ============================================
+#  INTENTIONALLY VULNERABLE - DO NOT USE IN PRODUCTION!
+# ============================================
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "3.2.0"           # VULN: Multiple CVEs
+Flask = "2.0.0"            # VULN: Session cookie CVE
+requests = "2.25.0"        # VULN: Proxy-Auth header leak
+PyYAML = "5.3"             # VULN: Arbitrary code execution
+Pillow = "8.0.0"           # VULN: RCE via image processing
+cryptography = "3.4"       # VULN: Multiple CVEs
+
+[tool.poetry.group.dev.dependencies]
+pytest = "7.0.0"
+black = "22.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
